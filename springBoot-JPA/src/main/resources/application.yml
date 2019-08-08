@@ -1,0 +1,26 @@
+#配置数据源和jpa相关属性
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mysql1
+    username: root
+    password: qwert
+ 
+  jpa:
+    hibernate:
+      ddl-auto: update
+#实体类维护数据库表结构的具体行为，update表示当实体类的属性发生变化时，表结构跟着更新
+    show-sql: true
+
+#配置thymeleaf
+  thymeleaf:
+    cache: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    
+    
