@@ -1,0 +1,13 @@
+#注册中心的注册地址
+eureka:
+    client:
+        service-url:
+            defaultZone: http://user:pwd@peer1:8761/eureka,http://user:pwd@peer2:8762/eureka
+server:
+    port: 8764
+#服务名称--负载均衡调用的时候根据名称来调用该服务的方法--名字绝对不能改，改了就访问不到了
+spring:
+    application:
+        name: service-provider
+
+
