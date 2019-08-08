@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.BooksMapper" >
+  <resultMap id="BaseResultMap" type="books" >
+    <id column="bid" property="bid" />
+    <result column="name" property="name"  />
+    <result column="types" property="types" />
+    <result column="price" property="price"  />
+    <result column="count" property="count" />
+  </resultMap>
+  
+  <insert id="add"  parameterType="books"  >
+     insert into books(name,types,price,count)values(#{name},#{types},#{price},#{count})  
+  </insert>
+  <delete id="delete" parameterType="int">
+    delete from books where bid=#{bid}
+  </delete>
+  <update id="update" parameterType="books">
+    update books set name=#{name},types=#{types},price=#{price},count=#{count} where bid=#{bid}
+  </update>
+  <select id="getCount"  resultType="long">
+       select count(*) from books 
+  </select>
+
+  <!--动态条件查询 -->
+    <select  id="queryDynamic" resultMap="BaseResultMap" >
+        select * from books 
+        <where>
+           <if test="name!=null and name!=''">
+               and name like concat('%',#{name},'%')
+          </if>
+           <if test="types!=null and types!=''">
+              and types like concat('%',#{types},'%')
+           </if>
+            <!-- <if test="price!=null ">
+              and price >=${price}
+           </if>
+            <if test="count!=null ">
+              and count  &gt;=${count}
+           </if> -->
+        </where>
+       limit  #{firstResult},#{maxResult} 
+    </select>
+  
+  
+</mapper>

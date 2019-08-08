@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+      
+        <!-- 配置自动扫描的包 -->
+        <context:component-scan base-package="controller"></context:component-scan>
+      
+        <!--开启MVC注解支持,通过annotation-driven可以替代下边的处理器映射器和适配器-->
+        <mvc:annotation-driven></mvc:annotation-driven>
+        
+          <!--处理器 适配器-->  
+        <!--<bean id="handlerAdapter" class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />   -->
+        <!--   配置视图解析器，能够解析jsp视图-->
+          <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+                    <!-- 配置视图前缀 -->
+                    <property name="prefix"  value="/jsp/"></property>
+                    <!-- 配置视图后缀 -->
+                    <property name="suffix"  value=".jsp"></property>                       
+          </bean>
+          
+        
+               <!-- 配置文件上传解析器 id必须设置为multipartResolver -->
+	    <bean id="multipartResolver"   class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		       <!-- 设置上传文件大小（单位：字节） -->
+		    <property name="maxUploadSize" value="2097152" />
+	    </bean>
+        
+        </beans>
