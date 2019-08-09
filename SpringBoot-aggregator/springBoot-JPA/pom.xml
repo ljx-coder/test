@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.microservice</groupId>
-	<artifactId>springCloud</artifactId>
+	<artifactId>SpringBoot-JPA</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springCloud</name>
+	<name>SpringBoot-JPA</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

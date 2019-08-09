@@ -1,18 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.microservices</groupId>
-  <artifactId>SpringCloud-aggregator</artifactId>
+  <groupId>com.mircoservices</groupId>
+  <artifactId>SpringBoot-aggregator</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging><!-- 打包方式必须为pom格式 -->
-  <name>SpringCloud-aggregator</name>
-  
+  <name>SpringBoot-aggregator</name>
   
   <modules>
-    <module>Eureka-Provider1</module>
-    <module>Eureka-Provider2</module>
-    <module>Eureka-server1</module>
-    <module>Eureka-server2</module>
-    <module>Feign-Hystrix-Eureka-Consumer</module>
-    <module>Ribbon-Eureka-Consumer</module>
+    <module>SpringBoot-Mybatis</module>
+    <module>SpringBoot-JPA</module>
   </modules>
 </project>
