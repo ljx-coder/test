@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.microservice</groupId>
-	<artifactId>SpringCloud-Eureka-Client2</artifactId>
+	<artifactId>Ribbon-Eureka-Consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringCloud-Eureka-Client2</name>
+	<name>Ribbon-Eureka-Consumer</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -28,6 +28,11 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+	   <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-devtools</artifactId>
+          <optional>true</optional>
+	   </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.microservice</groupId>
-	<artifactId>SpringCloud-Eureka</artifactId>
+	<artifactId>Eureka-server2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringCloud-Eureka</name>
+	<name>Eureka-server2</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -20,18 +20,22 @@
 	</properties>
 
 	<dependencies>
-	
-	   <!--Eureka服务端-->
-	  <dependency>
+	<!-- Eureka服务端 -->
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-	  </dependency>
-       <!--权限认证-->
-      <dependency>
+		</dependency>
+       <!--安全权限认证-->
+    <dependency>
            <groupId>org.springframework.boot</groupId>
            <artifactId>spring-boot-starter-security</artifactId>
       </dependency>
-
+      
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+	</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
