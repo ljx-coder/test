@@ -8,7 +8,7 @@
   <name>SpringBoot-aggregator</name>
   
   <modules>
-    <module>SpringBoot-Mybatis</module>
+    <module>SpringBoot_Mybatis</module>
     <module>SpringBoot-JPA</module>
   </modules>
 </project>

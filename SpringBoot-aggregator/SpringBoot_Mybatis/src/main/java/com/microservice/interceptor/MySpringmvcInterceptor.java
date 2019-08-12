@@ -1,4 +1,4 @@
-package demoApplication.interceptor;
+package com.microservice.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

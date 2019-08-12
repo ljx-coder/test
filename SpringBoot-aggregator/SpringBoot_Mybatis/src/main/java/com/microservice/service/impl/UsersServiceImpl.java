@@ -1,4 +1,4 @@
-package demoApplication.service.impl;
+package com.microservice.service.impl;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import demoApplication.entity.User;
-import demoApplication.mapper.UserMapper;
-import demoApplication.service.UsersService;
+import com.microservice.entity.User;
+import com.microservice.mapper.UserMapper;
+import com.microservice.service.UsersService;
 
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package demoApplication.mapper;
+package com.microservice.mapper;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import demoApplication.entity.User;
+import com.microservice.entity.User;
 
 @Mapper // 代替注解扫描映射文件的需求
 public interface UserMapper {

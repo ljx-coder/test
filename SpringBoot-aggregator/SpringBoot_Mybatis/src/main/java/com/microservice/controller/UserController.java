@@ -1,4 +1,4 @@
-package demoApplication.controller;
+package com.microservice.controller;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import demoApplication.entity.User;
-import demoApplication.service.UsersService;
+import com.microservice.entity.User;
+import com.microservice.service.UsersService;
 
 // @RestController 同时包含responsebody和controller注解
 @Controller

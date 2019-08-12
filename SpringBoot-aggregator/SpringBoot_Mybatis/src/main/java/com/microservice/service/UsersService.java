@@ -1,8 +1,8 @@
-package demoApplication.service;
+package com.microservice.service;
 
 import java.util.List;
 
-import demoApplication.entity.User;
+import com.microservice.entity.User;
 
 public interface UsersService {
 	public int add(User user);

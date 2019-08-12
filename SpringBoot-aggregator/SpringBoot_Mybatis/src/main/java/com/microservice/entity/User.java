@@ -1,4 +1,4 @@
-package demoApplication.entity;
+package com.microservice.entity;
 
 public class User {
 
