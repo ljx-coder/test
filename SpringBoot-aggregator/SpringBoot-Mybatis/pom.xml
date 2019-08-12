@@ -3,7 +3,7 @@
   <groupId>SpringBoot</groupId>
   <artifactId>SpringBoot-Mybatis</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   
    <!-- 设置spring boot的parent父级依赖-->
    <parent>
