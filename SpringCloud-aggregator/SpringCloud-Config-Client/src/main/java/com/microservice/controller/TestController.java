@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 	
-	@Value("${profiles}")
+	@Value("${env}")
 	private String env;
 	
-	@RequestMapping("/")
+	@RequestMapping("/env")
 	public String hello(){
 		return env;
 	}
