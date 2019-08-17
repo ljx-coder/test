@@ -14,5 +14,8 @@
     <module>Eureka-server2</module>
     <module>Feign-Hystrix-Eureka-Consumer</module>
     <module>Ribbon-Eureka-Consumer</module>
+    <module>Config-Server</module> 
+    <module>Config-Client</module> 
+    
   </modules>
 </project>
