@@ -12,10 +12,10 @@
     <module>Eureka-client-Provider2</module>
     <module>Eureka-server1</module>
     <module>Eureka-server2</module>
-    <module>Feign-Hystrix-Config-client-Consumer</module>
+    <module>Config-Client-Consumer-Feign-Hystrix</module>
     <module>Ribbon-Eureka-Consumer</module>
     <module>Config-Server</module> 
-	<module>Config-Client</module> 
+	
    
   </modules>
 </project>
