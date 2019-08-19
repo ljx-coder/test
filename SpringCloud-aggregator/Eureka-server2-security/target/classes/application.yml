@@ -8,11 +8,11 @@ eureka:
             defaultZone: http://user:pwd@peer1:8761/eureka
            #实现高可用，服务注册中心相互注册
 
-security:
-    basic:
-        enabled: true
+#配置安全验证                
+spring:
+  security:
     user:
-        name: user
-        password: pwd
+      name: user
+      password: pwd
 server:
     port: 8762

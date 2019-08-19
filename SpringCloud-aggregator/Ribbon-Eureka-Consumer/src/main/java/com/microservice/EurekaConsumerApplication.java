@@ -17,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @RestController
 public class EurekaConsumerApplication {
+	
 	@Autowired
 	private RestTemplate restTemplate;
 
@@ -24,16 +25,18 @@ public class EurekaConsumerApplication {
 		SpringApplication.run(EurekaConsumerApplication.class, args);
 	}
 
-	// å®ä¾‹åŒ–restTemplate,çº³å…¥spring beanç®¡ç†
+	// ÊµÀı»¯restTemplate,ÄÉÈëspring bean¹ÜÀí
 	@Bean
 	@LoadBalanced
 	public RestTemplate rest() {
 		return new RestTemplate();
 	}
 
-	// RestæœåŠ¡ç«¯ä½¿ç”¨RestTemplateå‘èµ·httpè¯·æ±‚,ç„¶åå¾—åˆ°æ•°æ®è¿”å›ç»™å‰ç«¯
-	// ä½¿ç”¨getForEntityæ–¹æ³•å‘é€è¯·æ±‚è°ƒç”¨æœåŠ¡ç”Ÿäº§è€…èµ„æº
-	// ä¼ å…¥çš„å‚æ•°ä¸ºURLåœ°å€å’Œè¿”å›å€¼ç±»å‹
+	
+	@SuppressWarnings("unchecked")
+	// Rest·şÎñ¶ËÊ¹ÓÃRestTemplate·¢ÆğhttpÇëÇó,È»ºóµÃµ½Êı¾İ·µ»Ø¸øÇ°¶Ë
+	// Ê¹ÓÃgetForEntity·½·¨·¢ËÍÇëÇóµ÷ÓÃ·şÎñÉú²úÕß×ÊÔ´
+	// ´«ÈëµÄ²ÎÊıÎªURLµØÖ·ºÍ·µ»ØÖµÀàĞÍ
 	@GetMapping("/getTouser")
 	public Object getTouser(Integer id) {
 		Map<String , Object> map=new HashMap<String, Object>();
@@ -42,7 +45,7 @@ public class EurekaConsumerApplication {
 		//map.put("id",4);
 	    //map=restTemplate.getForObject("http://service-provider/getuser?id={id}", Map.class,map);
 		
-		//å®Œæ•´çš„URLåœ°å€ä¸º"http://service-provider/getuser?id=?"
+		//ÍêÕûµÄURLµØÖ·Îª"http://service-provider/getuser?id=?"
 		map=restTemplate.getForObject("http://service-provider/getuser?id="+id, Map.class);
 		return map;
 	}

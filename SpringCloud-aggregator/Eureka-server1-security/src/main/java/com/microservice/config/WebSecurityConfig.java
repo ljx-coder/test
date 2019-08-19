@@ -6,10 +6,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 /**
- * ç”±äºspring boot2.0ç‰ˆçš„Spring security ä¼šé»˜è®¤å¼€å¯é˜²csrfæ”»å‡»
- * æ‰€æœ‰çš„è¯·æ±‚éƒ½å¿…é¡»æºå¸¦crsfè¿™ä¸ªå‚æ•°,å…³é—­csrf
- * æ–°å»ºä¸€ä¸ªé…ç½®ç±»ï¼ˆè¿™ä¸€æ­¥ä¸åšçš„è¯ï¼Œæ³¨å†Œä¸­å¿ƒèƒ½å¯åŠ¨ï¼Œä½†æ˜¯æœåŠ¡æ— æ³•æ³¨å†Œè¿›æ¥çš„ï¼‰
+ * ÓÉÓÚspring boot2.0°æµÄSpring security »áÄ¬ÈÏ¿ªÆô·Àcsrf¹¥»÷
+ * ËùÓĞµÄÇëÇó¶¼±ØĞëĞ¯´øcrsfÕâ¸ö²ÎÊı,¹Ø±Õcsrf
+ * ĞÂ½¨Ò»¸öÅäÖÃÀà£¨ÕâÒ»²½²»×öµÄ»°£¬×¢²áÖĞĞÄÄÜÆô¶¯£¬µ«ÊÇ·şÎñÎŞ·¨×¢²á½øÀ´µÄ£©
  */
+
 
 @EnableWebSecurity
 @Configuration
@@ -18,9 +19,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
-		//å…³é—­csrf
+		//¹Ø±Õcsrf
         http.csrf().disable(); 
-        //å¼€å¯è®¤è¯
+        //¿ªÆôÈÏÖ¤
         http.authorizeRequests().anyRequest().authenticated().and().httpBasic(); 
 	}
 }
