@@ -8,9 +8,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients//å¼€å¯feignåŠŸèƒ½
-//@EnableCircuitBreaker//å¼€å¯æ–­è·¯å™¨åŠŸèƒ½
-@EnableHystrixDashboard//å¼€å¯Hystrixä»ªè¡¨ç›˜
+@EnableFeignClients//¿ªÆôfeign¹¦ÄÜ
+//@EnableCircuitBreaker//¿ªÆô¶ÏÂ·Æ÷¹¦ÄÜ
+@EnableHystrixDashboard//¿ªÆôhystrixÒÇ±íÅÌ
 public class EurekaConsumerApplication {
    
 	public static void main(String[] args) {

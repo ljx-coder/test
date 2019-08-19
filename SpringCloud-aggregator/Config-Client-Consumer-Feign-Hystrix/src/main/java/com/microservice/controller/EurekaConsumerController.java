@@ -10,23 +10,23 @@ import com.microservice.feign.FeignConsumerClient;
 @RestController
 public class EurekaConsumerController {
 	
-	   @Autowired           //åƒè°ƒç”¨æœ¬åœ°æ–¹æ³•ä¸€æ ·è°ƒç”¨è¿œç¨‹æœåŠ¡
+	   @Autowired  //Ïñµ÷ÓÃ±¾µØ·½·¨Ò»Ñùµ÷ÓÃÔ¶³Ì·şÎñ
 	   private FeignConsumerClient feignConsumerClient;
 	   
-		//ç®€å•è¿œç¨‹è°ƒç”¨
+		//¼òµ¥Ô¶³Ìµ÷ÓÃ
 	   	@RequestMapping(value="/sayhello")
 	   	public String sayhello(){
 	   		return feignConsumerClient.hello();
 	   	}
 	   
-	   /*	//å®ç°ä¼ é€’å‚æ•°è¿œç¨‹è°ƒç”¨,Feigné»˜è®¤å®ç°äº†è´Ÿè½½å‡è¡¡
+	   /*	//ÊµÏÖ´«µİ²ÎÊıÔ¶³Ìµ÷ÓÃ,FeignÄ¬ÈÏÊµÏÖÁË¸ºÔØ¾ùºâ
 	   	@RequestMapping(value="/feign/{id}")
 	   	public Object getuser(@PathVariable("id") Integer id){
 	   		return feignConsumerClient.getuser(id);
 	   	}*/
          
 	   	
-	   	//config clientæµ‹è¯•
+	   	//config client²âÊÔ
 	   	@Value("${env}")
 	   	private String env;
 	   	

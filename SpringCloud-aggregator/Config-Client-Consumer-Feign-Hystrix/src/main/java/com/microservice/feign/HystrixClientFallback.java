@@ -7,11 +7,11 @@ public class HystrixClientFallback  implements FeignConsumerClient{
 	
     @Override
 	public String hello() {
-		return "Feignå®¢æˆ·ç«¯è®¿é—®å¤±è´¥!";
+		return "Feign¿Í»§¶Ë·ÃÎÊÊ§°Ü!";
 	}
 
 	/*public Object getuser(Integer id) {
-		return "Feignå®¢æˆ·ç«¯è®¿é—®å¤±è´¥!";
+		return "Feign¿Í»§¶Ë·ÃÎÊÊ§°Ü!";
 	}*/
 
 	
