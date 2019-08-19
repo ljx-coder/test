@@ -11,6 +11,8 @@ spring:
         git:
         #uri表示配置中心所在仓库的位置
           uri: https://gitee.com/ljxcoder/Config-repository
+          #也可以使用通配符https://gitee.com/ljxcoder/｛application}-{profile}
+          #实现一个远程持仓库对应一个微服务或环境
           username: ljxcoder
           password: ljx123
 #向服务注册中心注册

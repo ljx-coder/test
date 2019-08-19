@@ -8,11 +8,8 @@ spring:
   cloud:
     config:
       uri: http://localhost:8090
-      profile: test
-      label: master  
-#向服务注册中心注册      
-eureka:
-  client:
-    service-url:
-      defaultZone: http://user:pwd@peer1:8761/eureka/             
+      profile: test #设置环境
+      label: master #设置分支 
+           
 
+    
