@@ -15,8 +15,16 @@ spring:
           #实现一个远程持仓库对应一个微服务或环境
           username: ljxcoder
           password: ljx123
+#配置安全认证          
+  security:
+    user:
+      name: user
+      password: pwd        
 #向服务注册中心注册
 eureka:
   client:
     service-url:
-      defaultZone: http://user:pwd@peer1:8761/eureka/
+      defaultZone: http://user:pwd@peer1:8761/eureka/,http://user:pwd@peer2:8762/eureka/
+               
+
+ 

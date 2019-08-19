@@ -1,15 +1,29 @@
-
 server:
   port: 8765
+  
+#先向服务注册中心注册,再去寻找config server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:pwd@peer1:8761/eureka/,http://user:pwd@peer2:8762/eureka/
+                  
 #设置config client
 spring:
   application:
     name: consumer #根据config client的应用名找到相应的配置文件
   cloud:
     config:
-      uri: http://localhost:8090
+      discovery:
+        enabled: true
+        service-id: config-server #配置config server的在eureka的注册的应用名来寻找配置中心
+      #配置config server认证
+      username: user
+      password: pwd
+      #uri: http://localhost:8090 
+      #可以不直接定位到config server但不建议使用uri配置，应搭配eureka server使用service-id
       profile: test #设置环境
       label: master #设置分支 
            
+
 
     
