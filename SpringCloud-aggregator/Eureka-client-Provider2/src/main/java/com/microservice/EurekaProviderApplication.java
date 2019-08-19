@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@EnableDiscoveryClient // 琛ㄦ槑鏄湇鍔℃彁渚涘鎴风
+@EnableDiscoveryClient 
 @RestController
 public class EurekaProviderApplication {
 
@@ -23,7 +23,7 @@ public class EurekaProviderApplication {
 	@Value("${server.port}")
 	private String port;
 
-	//浣跨敤RestTemplate杩滅▼璋冪敤
+	//使用RestTemplate远程调用
 	/*@RequestMapping("/getuser")
 	public Object getuser(Integer id) {
 		Map<String, Object> map=new HashMap<String, Object>();
@@ -33,7 +33,7 @@ public class EurekaProviderApplication {
 		return map;
 	}*/
 	
-	//浣跨敤Feign閫氳繃API鎺ュ彛杩滅▼璋冪敤
+	//使用Feign通过API接口远程调用
 	@RequestMapping("/getuser/{id}")
 	public Object getuser(@PathVariable("id")Integer id) {
 	    

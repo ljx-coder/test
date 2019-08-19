@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@EnableDiscoveryClient // 琛ㄦ槑鏄湇鍔℃彁渚涘鎴风
+@EnableDiscoveryClient // 开启eureka客户端功能
 @RestController
 public class EurekaProviderApplication {
 
