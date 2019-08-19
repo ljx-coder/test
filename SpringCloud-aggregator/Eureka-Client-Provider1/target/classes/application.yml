@@ -1,0 +1,13 @@
+#注册中心的注册地址
+eureka:
+    client:
+        service-url:
+            defaultZone: http://user:pwd@peer1:8761/eureka,http://user:pwd@peer2:8762/eureka
+server:
+    port: 8763
+#服务名称--调用的时候根据名称来调用该服务的方法
+spring:
+    application:
+        name: service-provider
+
+
