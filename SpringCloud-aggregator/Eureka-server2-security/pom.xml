@@ -20,22 +20,22 @@
 	</properties>
 
 	<dependencies>
-	<!-- Eureka服务端 -->
-		<dependency>
+	
+	   <!--Eureka服务端-->
+	  <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-		</dependency>
+	  </dependency>
        <!--安全权限认证-->
-    <dependency>
+      <dependency>
            <groupId>org.springframework.boot</groupId>
            <artifactId>spring-boot-starter-security</artifactId>
       </dependency>
-      
-    <dependency>
+      <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-devtools</artifactId>
         <optional>true</optional>
-	</dependency>
+	  </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
