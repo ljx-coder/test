@@ -1,7 +1,6 @@
 
-#端口号
 server:
-    port: 8765
+  port: 8765
 #设置config client
 spring:
   application:
@@ -11,5 +10,9 @@ spring:
       uri: http://localhost:8090
       profile: test
       label: master  
-              
+#向服务注册中心注册      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:pwd@peer1:8761/eureka/             
 
