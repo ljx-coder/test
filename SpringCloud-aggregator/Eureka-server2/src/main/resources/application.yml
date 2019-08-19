@@ -1,0 +1,18 @@
+eureka:
+  instance:
+    hostname: peer2
+  client:
+        fetch-registry: false
+        register-with-eureka: false
+        serviceUrl:
+            defaultZone: http://user:pwd@peer1:8761/eureka
+           #实现高可用，服务注册中心相互注册
+
+security:
+    basic:
+        enabled: true
+    user:
+        name: user
+        password: pwd
+server:
+    port: 8762

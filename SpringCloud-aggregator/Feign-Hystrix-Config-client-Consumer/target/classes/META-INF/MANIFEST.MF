@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Feign-Hystrix-Config-client-Consumer
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: THINK
+Implementation-Vendor-Id: com.microservice
+Build-Jdk: 1.8.0_191
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Feign-Hystrix-Config-client-Consumer
+Created-By: Maven Integration for Eclipse
+

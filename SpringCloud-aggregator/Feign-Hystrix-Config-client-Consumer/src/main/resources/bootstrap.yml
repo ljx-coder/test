@@ -1,0 +1,15 @@
+
+#端口号
+server:
+    port: 8765
+#设置config client
+spring:
+  application:
+    name: consumer #根据config client的应用名找到相应的配置文件
+  cloud:
+    config:
+      uri: http://localhost:8090
+      profile: test
+      label: master  
+              
+

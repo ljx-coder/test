@@ -1,0 +1,20 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: config-server
+#配置config-server 仓库地址
+  cloud:
+    config:
+      server:
+        git:
+        #uri表示配置中心所在仓库的位置
+          uri: https://gitee.com/ljxcoder/Config-repository
+          username: ljxcoder
+          password: ljx123
+#向服务注册中心注册
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:pwd@peer1:8761/eureka/

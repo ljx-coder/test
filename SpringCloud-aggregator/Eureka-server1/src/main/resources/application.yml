@@ -1,0 +1,19 @@
+server:
+    port: 8761 
+    
+#实现高可用，服务注册中心相互注册   
+eureka:
+ instance:
+    hostname: peer1
+ client:
+        fetch-registry: false
+        register-with-eureka: false
+        serviceUrl:
+            defaultZone: http://user:pwd@peer2:8762/eureka
+
+#配置安全验证                
+spring:
+  security:
+    user:
+      name: user
+      password: pwd
