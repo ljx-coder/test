@@ -8,12 +8,12 @@
   
   
   <modules>
-    <module>Eureka-client-Provider1</module>
-    <module>Eureka-client-Provider2</module>
-    <module>Eureka-server1</module>
-    <module>Eureka-server2</module>
+    <module>Eureka-Client-Provider1</module>
+    <module>Eureka-Client-Provider2</module>
+    <module>Eureka-Server1</module>
+    <module>Eureka-Server2</module>
     <module>Config-Client-Consumer-Feign-Hystrix</module>
-    <module>Ribbon-Eureka-Consumer</module>
+    <module>Eureka-Consumer-RestTemplate-Ribbon</module>
     <module>Config-Server</module> 
 	
    
